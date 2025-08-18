@@ -298,13 +298,13 @@ type fromObj struct {
 	Address string `json:"address"`
 }
 type message struct {
-	ID        string   `json:"id"`
-	From      fromObj  `json:"from"`
-	Subject   string   `json:"subject"`
-	CreatedAt string   `json:"createdAt"`
-	HTML      any      `json:"html"` // string atau []string (API bisa variatif)
-	Text      string   `json:"text"`
-	Seen      bool     `json:"seen"`
+	ID        string  `json:"id"`
+	From      fromObj `json:"from"`
+	Subject   string  `json:"subject"`
+	CreatedAt string  `json:"createdAt"`
+	HTML      any     `json:"html"` // string atau []string (API bisa variatif)
+	Text      string  `json:"text"`
+	Seen      bool    `json:"seen"`
 }
 
 type hydraMessages struct {
@@ -474,8 +474,8 @@ func clearScreen() {
 func header() {
 	clearScreen()
 	fmt.Println(strings.Repeat("=", 50))
-	center("APLIKASI EMAIL SEMENTARA MAIL.TM")
-	center("MULTI-ACCOUNT (Go)")
+	center("MAIL.TM CLI")
+	center("MULTI-ACCOUNT")
 	fmt.Println(strings.Repeat("=", 50))
 	fmt.Println()
 }
@@ -811,7 +811,7 @@ func showAbout() {
 	header()
 	fmt.Println("TENTANG APLIKASI")
 	fmt.Println(strings.Repeat("-", 50))
-	fmt.Println("\nAplikasi Email Sementara Mail.TM (Go)")
+	fmt.Println("\nMail.TM CLI")
 	fmt.Println("Versi 1.0 (Multi-Account)")
 	fmt.Println("\nMenggunakan API mail.tm untuk membuat & mengelola email sementara.")
 	fmt.Println("\nFitur:")
